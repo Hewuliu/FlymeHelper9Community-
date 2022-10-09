@@ -61,7 +61,7 @@ class AccountFragment : BaseFragment() {
                     sudoFixPermissions()
                     //getEditor().putString("sn", msg.getData().get("sn").toString()).apply();
                     Toast.makeText(mContext, "绑定成功,重启应用生效", Toast.LENGTH_SHORT).show()
-                    refresh()
+//                    refresh()
                 } else {
                     Toast.makeText(mContext, Utils.decode("5Lya5ZGY5qCh6aqM5aSx6LSl") + ":\r\n" +
                             Gson().fromJson<Map<String, String>>(msg.data["value"].toString(), MutableMap::class.java).getOrDefault("error", msg.data["value"].toString()), Toast.LENGTH_LONG).show()
@@ -100,8 +100,8 @@ class AccountFragment : BaseFragment() {
                 Toast.makeText(mContext, "拉起手Q失败", Toast.LENGTH_LONG).show()
             }
         }
-        refresh()
-        `$`<View>(R.id.activation).setOnClickListener { v: View? -> dialog() }
+//        refresh()
+//        `$`<View>(R.id.activation).setOnClickListener { v: View? -> dialog() }
         `$`<View>(R.id.join_vip_group).setOnClickListener { v: View? ->
             if (!joinQQGroup("dNIW3xRJ8YKTdsFcJBak3_cZ0AwTBdEn")) {
                 Toast.makeText(mContext, "拉起手Q失败", Toast.LENGTH_LONG).show()
@@ -109,10 +109,11 @@ class AccountFragment : BaseFragment() {
         }
     }
 
-    fun refresh() {
-        (`$`<View>(R.id.vip_version) as TextView).text = Utils.decode("5b2T5YmN54mI5pys57G75Z6L") + ": " + if (!Utils.check(helper)) Utils.decode("5YWN6LS554mI") else Utils.Companion.decode("5LuY6LS554mI")
-        (`$`<View>(R.id.bound_qq) as TextView).text = Utils.decode("57uR5a6aUVE=") + ": " + Utils.decodeStr(helper!!.getString(Utils.decode("bWFyaw=="), "瘡"))
-    }
+//    fun refresh() {
+////        (`$`<View>(R.id.vip_version) as TextView).text = Utils.decode("5b2T5YmN54mI5pys57G75Z6L") + ": " + if (!Utils.check(helper)) Utils.decode("5YWN6LS554mI") else Utils.Companion.decode("5LuY6LS554mI")
+////        (`$`<View>(R.id.vip_version) as TextView).text = Utils.decode("5b2T5YmN54mI5pys57G75Z6L") + ": " + Utils.Companion.decode("5byA5rqQ5YWN6LS554mI")
+////        (`$`<View>(R.id.bound_qq) as TextView).text = Utils.decode("57uR5a6aUVE=") + ": " + Utils.decodeStr(helper!!.getString(Utils.decode("bWFyaw=="), "瘡"))
+//    }
 
     /****************
      *
