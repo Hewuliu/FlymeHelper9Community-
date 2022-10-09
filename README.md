@@ -7,6 +7,7 @@ CoderStory的博客：[blog.coderstory.cn](https://blog.coderstory.cn)
  
  
 Flyme9助手支持去除Flyme系统的大部分广告内容，清理应用缓存，应用冻结备份等功能。
+原作者CoderStory已将程序开源，故hzz将其付费功能全部转为免费功能，并删除绑定激活功能。
 
 
 ## License
